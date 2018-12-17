@@ -20,7 +20,14 @@
         <module>eureka-server</module>
         <module>config-server</module>
         <module>admin-service</module>
+        <!-- 订单系统 -->
         <module>scis-order-service</module>
+        <!-- 库存系统 -->
+        <module>scis-inventory-service</module>
+        <!-- 仓储系统 -->
+        <module>scis-warehousing-service</module>
+        <!-- 积分系统 -->
+        <module>scis-integral-service</module>
     </modules>
 
 </project>

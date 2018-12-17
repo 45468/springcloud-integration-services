@@ -7,27 +7,29 @@
 		<artifactId>springcloud-integration-services</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>admin-service</artifactId>
+	<artifactId>scis-inventory-service</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>admin-service</name>
+	<name>scis-inventory-service</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
 		<java.version>1.8</java.version>
-		<spring-boot-admin.version>Camden.SR5</spring-boot-admin.version>
+		<spring-cloud.version>Camden.SR5</spring-cloud.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<dependencies>
+		<!-- 配置客户端依赖包 -->
 		<dependency>
-			<groupId>de.codecentric</groupId>
-			<artifactId>spring-boot-admin-server</artifactId>
-			<version>1.4.6</version>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-config-client</artifactId>
 		</dependency>
+
+		<!-- web模块依赖包 -->
 		<dependency>
-			<groupId>de.codecentric</groupId>
-			<artifactId>spring-boot-admin-server-ui</artifactId>
-			<version>1.4.6</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
 		<dependency>
@@ -40,9 +42,9 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>de.codecentric</groupId>
-				<artifactId>spring-boot-admin-dependencies</artifactId>
-				<version>${spring-boot-admin.version}</version>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>

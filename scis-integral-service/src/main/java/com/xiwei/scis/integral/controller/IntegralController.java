@@ -1,20 +1,20 @@
-package com.xiwei.scis.order;
+package com.xiwei.scis.integral.controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Created by L.Answer on 2018-12-17 15:27
+ * Created by L.Answer on 2018-12-17 20:09
  */
 @RestController
-public class OrderController {
+public class IntegralController {
 
     @Value("${config.file.name}")
     private String configFileName;
 
-    @RequestMapping("/orders")
-    public String orders() {
+    @RequestMapping("/index")
+    public String index() {
         return "configFileName: " + configFileName;
     }
 

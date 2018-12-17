@@ -1,0 +1,18 @@
+server:
+  port: 8810
+
+
+spring:
+  application:
+    name: scis-order-service
+
+  cloud:
+    config:
+      # 指明配置服务中心的访问地址
+      uri: http://localhost:7072/
+      # 配置文件名称, 对应{applicaion}值
+      name: ${spring.application.name}
+      # 指明选择的环境
+      profile: dev
+      # 指明远程仓库的分支
+      label: master

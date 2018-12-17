@@ -1,6 +1,21 @@
 # SpringCloud 组件集成服务
 
-### 壹、 核心组件说明
+### 壹、 项目分布说明
+ - **订单系统**: scis-order-service
+   - **端口分布**: 8810 - 8819
+   
+ - **库存系统**: scis-inventory-service
+   - **端口分布**: 8820 - 8829
+   
+ - **仓储系统**: scis-warehousing-service
+   - **端口分布**: 8830 - 8839
+   
+ - **积分系统**: scis-integral-service
+   - **端口分布**: 8840 - 8849
+  
+&nbsp;
+
+### 贰、 核心组件说明
  - **Eureka**: 各个服务启动时, Eureka Client都会将服务注册到Eureka Server, 并且Eureka Client还可以反过来从Eureka Server拉取注册表, 从而知道其他服务在哪里
    - **Eureka Client**: 负责将这个服务的信息注册到Eureka Server中
    - **Eureka Server**: 注册中心, 里面有一个注册表, 保存了各个服务所在的机器和端口号
@@ -15,7 +30,6 @@
    
  - **Zuul**: 如果前端、移动端要调用后端系统, 统一从Zuul网关进入, 由Zuul网关转发请求给对应的服务
    - 负责网络路由的
-
 
 
 

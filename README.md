@@ -2,16 +2,16 @@
 
 ### 壹、 业务系统分布说明
  - **订单系统**: [scis-order-service](https://github.com/AnswerAICode/springcloud-integration-services/tree/master/scis-order-service)
-   - **端口分布**: 8810 - 8819
+   - **集群端口分布**: 8810(单节点) - 8819
    
  - **库存系统**: [scis-inventory-service](https://github.com/AnswerAICode/springcloud-integration-services/tree/master/scis-inventory-service)
-   - **端口分布**: 8820 - 8829
+   - **集群端口分布**: 8820(单节点) - 8829
    
  - **仓储系统**: [scis-warehousing-service](https://github.com/AnswerAICode/springcloud-integration-services/tree/master/scis-warehousing-service)
-   - **端口分布**: 8830 - 8839
+   - **集群端口分布**: 8830(单节点) - 8839
    
  - **积分系统**: [scis-integral-service](https://github.com/AnswerAICode/springcloud-integration-services/tree/master/scis-integral-service)
-   - **端口分布**: 8840 - 8849
+   - **集群端口分布**: 8840(单节点) - 8849
   
 &nbsp;
 

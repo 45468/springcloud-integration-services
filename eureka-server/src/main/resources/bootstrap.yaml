@@ -25,9 +25,9 @@ eureka:
       eviction-interval-timer-in-ms: 10000
 
     client:
-      # 是否向服务注册中心注册自己
+      # 是否将自己注册到Eureka Server, 默认为true. 由于当前应用就是Eureka Server, 因此设为 false
       register-with-eureka: false
-      # 是否检索服务
+      # 是否从Eureka Server获取注册信息, 默认为true. 如果这是一个单点的 Eureka Server, 不需要同步其他节点的数据, 可以设为false
       fetch-registry: false
       # 服务注册中心的配置内容, 指定服务注册中心的位置
       service-url:

@@ -1,4 +1,4 @@
-# SpringCloud 组件集成服务
+# SpringCloud 多组件集成服务
 
 ### 壹、 业务系统分布说明
  - **订单系统**: [scis-order-service](https://github.com/AnswerAICode/springcloud-integration-services/tree/master/scis-order-service)

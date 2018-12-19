@@ -12,3 +12,18 @@ spring:
       profile: dev
       # 指明远程仓库的分支
       label: master
+  boot:
+    admin:
+      url: http://localhost:8720
+      username: root
+      password: 123456
+      client:
+        prefer-ip: true
+
+# 是否需要秘钥认证
+management:
+  security:
+    enabled: false
+
+info:
+  version: '@project.version@'

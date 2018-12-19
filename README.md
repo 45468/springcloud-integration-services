@@ -19,11 +19,12 @@
  - **配置管理**: [config-server](https://github.com/AnswerAICode/springcloud-integration-services/tree/master/config-server)
    - **端口**: 8700
    
- - **服务监控**: [admin-service](https://github.com/AnswerAICode/springcloud-integration-services/tree/master/admin-service)
-   - **端口**: 8710
-   
  - **注册中心**: [eureka-server](https://github.com/AnswerAICode/springcloud-integration-services/tree/master/eureka-server)
+    - **端口**: 8710
+      
+ - **服务监控**: [admin-service](https://github.com/AnswerAICode/springcloud-integration-services/tree/master/admin-service)
    - **端口**: 8720
+   
 
 &nbsp;
 

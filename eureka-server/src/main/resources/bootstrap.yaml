@@ -1,5 +1,5 @@
 server:
-  port: 8720
+  port: 8710
 
 spring:
   application:

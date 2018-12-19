@@ -15,7 +15,17 @@
   
 &nbsp;
 
-### 贰、 核心组件说明
+### 贰、 组件服务分布说明
+ - **config-server**: [config-server](https://github.com/AnswerAICode/springcloud-integration-services/tree/master/config-server)
+   - **端口**: 8700
+ - **admin-service**: [admin-service](https://github.com/AnswerAICode/springcloud-integration-services/tree/master/admin-service)
+   - **端口**: 8710
+ - **eureka-server**: [eureka-server](https://github.com/AnswerAICode/springcloud-integration-services/tree/master/eureka-server)
+   - **端口**: 8720
+
+&nbsp;
+
+### 叁、 核心组件说明
  - **Eureka**: 各个服务启动时, Eureka Client都会将服务注册到Eureka Server, 并且Eureka Client还可以反过来从Eureka Server拉取注册表, 从而知道其他服务在哪里
    - **Eureka Client**: 负责将这个服务的信息注册到Eureka Server中
    - **Eureka Server**: 注册中心, 里面有一个注册表, 保存了各个服务所在的机器和端口号

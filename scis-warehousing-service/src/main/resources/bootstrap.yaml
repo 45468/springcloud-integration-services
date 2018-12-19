@@ -5,7 +5,7 @@ spring:
   cloud:
     config:
       # 指明配置服务中心的访问地址
-      uri: http://localhost:7072/
+      uri: http://localhost:8700/
       # 配置文件名称, 对应{applicaion}值
       name: ${spring.application.name}
       # 指明选择的环境

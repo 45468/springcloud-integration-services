@@ -16,6 +16,24 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+    <properties>
+        <spring-cloud.version>Camden.SR5</spring-cloud.version>
+        <spring-boot-admin.version>Camden.SR5</spring-boot-admin.version>
+        <spring.test.version>1.5.3.RELEASE</spring.test.version>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!-- 子模块公共jar包引用 -->
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>${spring.test.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
     <modules>
         <module>eureka-server</module>
         <module>config-server</module>

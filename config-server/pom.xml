@@ -12,22 +12,10 @@
 	<name>config-server</name>
 	<description>Config-server for Answer&#39;s SPIC</description>
 
-	<properties>
-		<java.version>1.8</java.version>
-		<spring-cloud.version>Camden.SR5</spring-cloud.version>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-config-server</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
 		</dependency>
 	</dependencies>
 

@@ -13,12 +13,6 @@
 	<name>scis-warehousing-service</name>
 	<description>Demo project for Spring Boot</description>
 
-	<properties>
-		<java.version>1.8</java.version>
-		<spring-cloud.version>Camden.SR5</spring-cloud.version>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
-
 	<dependencies>
 		<!-- 配置客户端依赖包 -->
 		<dependency>
@@ -47,12 +41,6 @@
 		<dependency>
 			<groupId>org.jolokia</groupId>
 			<artifactId>jolokia-core</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
 		</dependency>
 	</dependencies>
 

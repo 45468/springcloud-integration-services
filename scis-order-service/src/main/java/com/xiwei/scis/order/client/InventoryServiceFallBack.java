@@ -15,7 +15,7 @@ public class InventoryServiceFallBack implements InventoryService {
 
     @Override
     public int updateInventoryByOrderId(String orderId) {
-        LOGGER.info("库存系统接口不可用服务降级, orderID: {}.", orderId);
+        LOGGER.info("库存系统接口不可用, 服务降级并记录数据库, orderID: {}.", orderId);
         return -1;
     }
 }

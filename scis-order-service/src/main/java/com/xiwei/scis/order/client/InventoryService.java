@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Created by L.Answer on 2018-12-20 10:44
  * 库存系统接口
  */
-@FeignClient(name = "scis-inventory-service", fallback = InventoryServiceFallBack.class)
+@FeignClient(name = "scis-inventory-service", fallback = InventoryServiceFallBack.class, configuration = InventoryServiceConfiguration.class)
 public interface InventoryService {
 
     /**

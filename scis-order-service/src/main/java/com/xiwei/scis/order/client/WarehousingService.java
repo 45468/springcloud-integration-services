@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Created by L.Answer on 2018-12-20 10:44
  * 仓储系统接口
  */
-@FeignClient(name = "scis-warehousing-service", fallback = WarehousingServiceFallBack.class)
+@FeignClient(name = "scis-warehousing-service", fallback = WarehousingServiceFallBack.class, configuration = WarehousingServiceConfiguration.class)
 public interface WarehousingService {
 
     @RequestMapping(value = "warehousing/update/{orderId}", method = RequestMethod.POST, consumes = "application/json")

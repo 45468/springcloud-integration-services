@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * fallback: 定义容错的处理类, 当调用远程接口失败或超时时, 会调用对应接口的容错逻辑, fallback指定的类必须实现@FeignClient标记的接口
  * fallbackFactory: 工厂类, 用于生成fallback类示例, 通过这个属性我们可以实现每个接口通用的容错逻辑, 减少重复的代码
  */
-@FeignClient(name = "scis-integral-service", fallback = IntegralServiceFallBack.class)
+@FeignClient(name = "scis-integral-service", fallback = IntegralServiceFallBack.class, configuration = IntegralServiceConfiguration.class)
 public interface IntegralService {
 
     @RequestMapping(value = "integral/update/{orderId}", method = RequestMethod.POST, consumes = "application/json")

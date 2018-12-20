@@ -15,7 +15,7 @@ public class WarehousingServiceFallBack implements WarehousingService {
 
     @Override
     public int updateWarehousingByOrderId(String orderId) {
-        LOGGER.info("仓储系统接口不可用服务降级, orderID: {}.", orderId);
+        LOGGER.info("仓储系统接口不可用, 服务降级并记录数据库, orderID: {}.", orderId);
         return -1;
     }
 }

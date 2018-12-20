@@ -58,7 +58,7 @@
  - [x] **基础组件**
  
     1. **配置管理**: ConfigServerApplication
-        - 远程配置仓库: [springcloud-integration-services](https://github.com/AnswerAICode/spring-cloud-config/tree/master/springcloud-integration-services)
+        - 远程配置仓库地址: [springcloud-integration-services](https://github.com/AnswerAICode/spring-cloud-config/tree/master/springcloud-integration-services)
     
     2. **注册中心**: EurekaServerApplication
         - 访问地址： [http://localhost:8710/](http://localhost:8710/)

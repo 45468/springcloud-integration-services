@@ -25,6 +25,9 @@
  - **服务监控**: [admin-service](https://github.com/AnswerAICode/springcloud-integration-services/tree/master/admin-service)
    - **端口**: 8720
    
+ - **网关服务**: [gateway-zuul](https://github.com/AnswerAICode/springcloud-integration-services/tree/master/gateway-zuul) 
+   - **端口**: 8600
+   
 
 &nbsp;
 
@@ -52,27 +55,39 @@
 &nbsp;
 
 ### 肆、 服务启动顺序
- 1. **配置管理**: ConfigServerApplication
+ - [x] **基础组件**
  
- 2. **注册中心**: EurekaServerApplication
- 
- 3. **服务监控**: AdminServiceApplication
- 
- 4. **订单系统**: ScisOrderServiceApplication
- 
- 5. **库存系统**: ScisInventoryServiceApplication
- 
- 6. **仓储系统**: ScisWarehousingServiceApplication
- 
- 7. **积分系统**: ScisIntegralServiceApplication
+    1. **配置管理**: ConfigServerApplication
+    
+    2. **注册中心**: EurekaServerApplication
+        - 访问地址： [http://localhost:8710/](http://localhost:8710/)
+    
+    3. **服务监控**: AdminServiceApplication
+        - 访问地址： [http://localhost:8720](http://localhost:8720) 
+        
+    4. **网关服务**: GatewayZuulApplication
+        - 访问地址： [http://localhost:8600/serviceid/**](http://localhost:8600/serviceid/**) 
 
 
+ - [x] **业务系统**
+ 
+    1. **订单系统**: ScisOrderServiceApplication
+    
+    2. **库存系统**: ScisInventoryServiceApplication
+    
+    3. **仓储系统**: ScisWarehousingServiceApplication
+    
+    4. **积分系统**: ScisIntegralServiceApplication
+    
 &nbsp;
 
 ### 伍、 测试
-```bash
-    # 测试 Feign 远程接口调用, 访问订单系统更新接口, 同时调用库存、仓储、积分系统的更新接口
-    http://localhost:8810/order/update/10
+```text
+    测试 Feign 远程接口调用, 访问订单系统更新接口, 同时调用库存、仓储、积分系统的更新接口
+        http://localhost:8810/order/update/10
+        
+    启动Zuul网关服务后也可通过以下地址访问
+        http://localhost:8600/scis-order-service/order/update/10
 ```
 
 &nbsp;

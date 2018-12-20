@@ -44,13 +44,39 @@
  - **Zuul**: 如果前端、移动端要调用后端系统, 统一从Zuul网关进入, 由Zuul网关转发请求给对应的服务
    - 负责网络路由的
 
-
-
-
+ - **Sleuth**: 链路追踪
+   - 分布式链路追踪： Sleuth + Zipkin
 
 断路器聚合监控(Hystrix Turbine)
 
 &nbsp;
 
+### 肆、 服务启动顺序
+ 1. **配置管理**: ConfigServerApplication
+ 
+ 2. **注册中心**: EurekaServerApplication
+ 
+ 3. **服务监控**: AdminServiceApplication
+ 
+ 4. **订单系统**: ScisOrderServiceApplication
+ 
+ 5. **库存系统**: ScisInventoryServiceApplication
+ 
+ 6. **仓储系统**: ScisWarehousingServiceApplication
+ 
+ 7. **积分系统**: ScisIntegralServiceApplication
+
+
+&nbsp;
+
+### 伍、 测试
+```bash
+    # 测试 Feign 远程接口调用, 访问订单系统更新接口, 同时调用库存、仓储、积分系统的更新接口
+    http://localhost:8810/order/update/10
+```
+
+&nbsp;
+
 ### 附录 - 参考网址
   - [拜托！面试请不要再问我Spring Cloud底层原理](https://mp.weixin.qq.com/s/7cIpSV0dHV5jHdxF4Wdtgw)
+  - [纯洁的微笑 - Spring Cloud 系列文章](http://www.ityouknow.com/spring-cloud.html)

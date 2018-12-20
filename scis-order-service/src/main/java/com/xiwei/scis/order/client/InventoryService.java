@@ -15,7 +15,7 @@ public interface InventoryService {
     /**
      * consumes: 指定处理请求的提交内容类型(Content-Type), 例如application/json, text/html;
      * */
-    @RequestMapping(value = "feign/inventory/{orderId}", method = RequestMethod.POST, consumes = "application/json")
+    @RequestMapping(value = "inventory/update/{orderId}", method = RequestMethod.POST, consumes = "application/json")
     int updateInventoryByOrderId(@PathVariable("orderId") String orderId);
 
 }

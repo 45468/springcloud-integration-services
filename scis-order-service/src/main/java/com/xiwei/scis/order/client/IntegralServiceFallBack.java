@@ -15,7 +15,7 @@ public class IntegralServiceFallBack implements IntegralService {
 
     @Override
     public int updateIntegralByOrderId(String orderId) {
-        LOGGER.info("积分系统服务降级, orderID: {}.", orderId);
+        LOGGER.info("积分系统接口不可用服务降级, orderID: {}.", orderId);
         return -1;
     }
 }

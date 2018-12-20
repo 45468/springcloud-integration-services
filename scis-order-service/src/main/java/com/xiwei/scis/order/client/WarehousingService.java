@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @FeignClient(name = "scis-warehousing-service", fallback = WarehousingServiceFallBack.class)
 public interface WarehousingService {
 
-    @RequestMapping(value = "feign/warehousing/{orderId}", method = RequestMethod.POST, consumes = "application/json")
+    @RequestMapping(value = "warehousing/update/{orderId}", method = RequestMethod.POST, consumes = "application/json")
     int updateWarehousingByOrderId(@PathVariable("orderId") String orderId);
 
 }

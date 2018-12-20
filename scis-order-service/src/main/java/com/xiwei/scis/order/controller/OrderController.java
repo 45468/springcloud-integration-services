@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * Created by L.Answer on 2018-12-17 15:27
  */
 @RestController
+@RequestMapping(value = "/order")
 public class OrderController {
     private static final Logger LOGGER = LoggerFactory.getLogger(OrderController.class);
 
@@ -25,7 +26,7 @@ public class OrderController {
     private IntegralService integralService;
 
 
-    @RequestMapping("/order/update/{orderId}")
+    @RequestMapping("/update/{orderId}")
     public String updateOrderByOrderId(@PathVariable("orderId") String orderId) {
         LOGGER.info("update order by orderID: {}.", orderId);
 

@@ -16,6 +16,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @FeignClient(name = "scis-integral-service", fallback = IntegralServiceFallBack.class)
 public interface IntegralService {
 
-    @RequestMapping(value = "feign/integral/{orderId}", method = RequestMethod.POST, consumes = "application/json")
+    @RequestMapping(value = "integral/update/{orderId}", method = RequestMethod.POST, consumes = "application/json")
     int updateIntegralByOrderId(@PathVariable("orderId") String orderId);
 }

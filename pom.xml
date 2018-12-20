@@ -42,6 +42,8 @@
         <module>eureka-server</module>
         <!-- 服务监控 -->
         <module>admin-service</module>
+        <!-- 网关服务 -->
+        <module>gateway-zuul</module>
         <!-- 订单系统 -->
         <module>scis-order-service</module>
         <!-- 库存系统 -->

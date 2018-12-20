@@ -36,8 +36,11 @@
     </dependencies>
 
     <modules>
-        <module>eureka-server</module>
+        <!-- 配置管理 -->
         <module>config-server</module>
+        <!-- 注册中心 -->
+        <module>eureka-server</module>
+        <!-- 服务监控 -->
         <module>admin-service</module>
         <!-- 订单系统 -->
         <module>scis-order-service</module>

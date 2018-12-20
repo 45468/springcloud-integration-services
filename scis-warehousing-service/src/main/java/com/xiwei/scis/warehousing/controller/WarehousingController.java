@@ -1,7 +1,9 @@
 package com.xiwei.scis.warehousing.controller;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -9,13 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class WarehousingController {
+    private static final Logger LOGGER = LoggerFactory.getLogger(WarehousingController.class);
 
-    @Value("${config.file.name}")
-    private String configFileName;
-
-    @RequestMapping("/index")
-    public String index() {
-        return "configFileName: " + configFileName;
+    @PostMapping("/feign/warehousing/{orderId}")
+    public int updateWarehousingByOrderId(@PathVariable("orderId") String orderId) {
+        LOGGER.info("warehousing orderId: {}.", orderId);
+        return 1;
     }
 
 }

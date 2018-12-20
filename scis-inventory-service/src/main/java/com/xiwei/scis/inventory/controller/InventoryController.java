@@ -1,7 +1,9 @@
 package com.xiwei.scis.inventory.controller;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -9,13 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class InventoryController {
+    private static final Logger LOGGER = LoggerFactory.getLogger(InventoryController.class);
 
-    @Value("${config.file.name}")
-    private String configFileName;
 
-    @RequestMapping("/index")
-    public String index() {
-        return "configFileName: " + configFileName;
+    @PostMapping("/feign/inventory/{orderId}")
+    public int updateIntegralByOrderId(@PathVariable("orderId") String orderId) {
+        LOGGER.info("inventory orderId: {}.", orderId);
+        return 1;
     }
-
 }

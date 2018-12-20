@@ -1,7 +1,9 @@
 package com.xiwei.scis.integral.controller;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -9,13 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class IntegralController {
+    public static final Logger LOGGER = LoggerFactory.getLogger(IntegralController.class);
 
-    @Value("${config.file.name}")
-    private String configFileName;
-
-    @RequestMapping("/index")
-    public String index() {
-        return "configFileName: " + configFileName;
+    @PostMapping(value = "/feign/integral/{orderId}")
+    public int updateIntegralByOrderId(@PathVariable("orderId") String orderId) {
+        LOGGER.info("integral orderId: {}.", orderId);
+        return 1;
     }
 
 }
